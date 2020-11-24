@@ -1,0 +1,100 @@
+html, body { 
+    width: 100%; 
+    height: 100%; 
+}
+body::before{
+    content: "";
+    background-image: linear-gradient(45deg,red,orange,yellow);
+    display: block;
+    top: 0px;
+    left: 0px;
+    z-index: -100;
+    opacity: 0.8;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-repeat: repeat;
+}
+@media screen and (max-width: 450px) {
+    body::before{
+        height: 120%;
+    }
+  }
+#heading{
+    text-align: center;
+    margin-top: 10px;
+    font-family: var(--secondary-heading);
+    font-size: 2rem;
+    text-decoration: underline;
+}
+@media screen and (max-width: 450px) {
+    #heading{
+        font-size: 1.5rem;
+    }
+  }
+section{
+    margin: 0px auto;
+    width: 80%;
+    text-align: center;
+}
+#intro-synopsis{
+    text-align: center;
+    margin-top: 20px;
+}
+#desc h2,#intro-synopsis h2{
+    text-decoration: underline;
+    margin: 10px 0px;
+    font-family: var(--main-heading);
+    font-weight: bolder;
+    font-size: 1.75rem;
+}
+@media screen and (max-width: 450px) {
+    #desc h2,#intro-synopsis h2{
+        font-size: 1.35rem;
+    }
+  }
+#desc p,#intro-synopsis p{
+    text-align: justify;
+    font-family: var(--paragraph);
+    margin: 5px 0px;
+    font-size: 1.15rem;
+}
+@media screen and (max-width: 450px) {
+    #desc p,#intro-synopsis p{
+        font-size: 0.9rem;
+    }
+  }
+
+#desc ul,#intro-synopsis ul{
+    font-family: var(--paragraph);
+    margin: 5px 0px;
+    font-size: 1.1rem;
+    padding-left: 20px;
+    text-align: left;
+    list-style-position: inside;
+}
+@media screen and (max-width: 450px) {
+    #desc ul,#intro-synopsis ul{
+        font-size: 0.9rem;
+    }
+  }
+#desc::before{
+    /* content: ""; */
+    content: "";
+    background-image: linear-gradient(45deg,red,orange,yellow);
+    display: block;
+    top: 100%;
+    left: 0px;
+    z-index: -100;
+    opacity: 0.8;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-repeat: repeat;
+}
+@media screen and (max-width: 450px) {
+    #desc::before{
+        top: 120%;
+        height: 120%;
+    }
+  }
